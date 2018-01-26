@@ -11,7 +11,7 @@
 //   // rlink[8] = "sketch008.html";
 //   // rlink[9] = "sketch009.html";
 //   var x = Math.floor(Math.random() * rlink.length);
-//   window.location.href = "/sketchbook/"+rlink[x];
+//   window.location.href = "sketchbook/"+rlink[x];
 // }, 5*1000);
 
 
@@ -29,7 +29,7 @@ function changeScene(){
   // rlink[8] = "sketch008.html";
   // rlink[9] = "sketch009.html";
   var x = Math.floor(Math.random() * rlink.length);
-  window.location.href = "/sketchbook/"+rlink[x];
+  window.location.href = "sketchbook/"+rlink[x];
 };
 
 
