@@ -6,14 +6,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="styles.css">
-    <script src="js/processing.min.js"></script>
-    <script src="script.js" defer></script>
-    <script src="js/randomJump.js" defer></script>
   </head>
   <body>
-    <div id="container">
-    
-      <canvas id="pde" data-processing-sources="sketchbook/sketch000.pde"></canvas>
-    </div>
+    <script>
+      function changeScene(){  
+        var rlink = new Array();
+        rlink[0] = "sketch000.html"
+        rlink[1] = "sketch001.html";
+        // rlink[2] = "sketch002.html";
+        // rlink[3] = "sketch003.html";
+        // rlink[4] = "sketch004.html";
+        // rlink[5] = "sketch005.html";
+        // rlink[6] = "sketch006.html";
+        // rlink[7] = "sketch007.html";
+        // rlink[8] = "sketch008.html";
+        // rlink[9] = "sketch009.html";
+        var x = Math.floor(Math.random() * rlink.length);
+        window.location.href = "sketchbook/"+rlink[x];
+      };
+      changeScene()
+    </script>
   </body>
 </html>
