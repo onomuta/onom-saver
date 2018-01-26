@@ -29,7 +29,7 @@ function changeScene(){
   // rlink[8] = "sketch008.html";
   // rlink[9] = "sketch009.html";
   var x = Math.floor(Math.random() * rlink.length);
-  window.location.href = "sketchbook/"+rlink[x];
+  window.location.href = "../sketchbook/"+rlink[x];
 };
 
 
@@ -41,3 +41,11 @@ document.onkeydown = function (e){
 	// 出力テスト
 	console.log(e);
 };
+
+function TouchEventFunc(e){
+  changeScene();
+}
+var element = document.getElementById("pde");
+
+// タッチを開始すると実行されるイベント
+element.addEventListener("touchstart",TouchEventFunc);
