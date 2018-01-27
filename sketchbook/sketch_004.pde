@@ -14,15 +14,15 @@ void setup(){
   noFill();
   smooth();
   colorMode(HSB);
-  stroke(255);  
+  noStroke();
   rectMode(CENTER)
 }
 
 void draw(){
   background(0); 
   for(int i = num - 1 ; i > 0 ; i--) {
-      x[i] = random(width - width/10);
-      y[i] = random(height - height/10);
+      x[i] = random(width);
+      y[i] = random(height);
       w[i] = random(width/4);
       h[i] = random(height/4);
       fill(255);
