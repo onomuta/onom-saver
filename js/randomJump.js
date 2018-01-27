@@ -37,9 +37,9 @@ function changeScene(){
 
 document.onkeydown = function (e){
   changeScene();
-
-	// 出力テスト
-	console.log(e);
+};
+document.onmousedown = function (e){
+	changeScene();
 };
 
 function TouchEventFunc(e){
@@ -49,3 +49,5 @@ var element = document.getElementById("pde");
 
 // タッチを開始すると実行されるイベント
 element.addEventListener("touchstart",TouchEventFunc);
+
+
