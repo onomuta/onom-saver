@@ -21,7 +21,7 @@ function changeScene(){
   rlink[0] = "sketch_000.html"
   rlink[1] = "sketch_001.html";
   rlink[2] = "sketch_002.html";
-  // rlink[3] = "sketch_003.html";
+  rlink[3] = "sketch_003.html";
   // rlink[4] = "sketch_004.html";
   // rlink[5] = "sketch_005.html";
   // rlink[6] = "sketch_006.html";
