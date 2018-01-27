@@ -48,7 +48,7 @@ void draw(){
       xnoise += 0.1;
       pushMatrix();
         translate(x, y);
-        rotate(noise(xnoise + xScroll, ynoise + yScroll, frame)*4);
+        rotate(noise(xnoise + xScroll, ynoise + yScroll, frame)*10);
         
         drawPoint(0, 0, noise(xnoise + xScroll, ynoise + yScroll, frame));
         
