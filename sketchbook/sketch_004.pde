@@ -1,5 +1,5 @@
-//int field_width = screenWidth;
-//int field_height = screenHeight;
+int field_width = screenWidth;
+int field_height = screenHeight;
 float frame = 0;
 int num = 10;
 float[] x = new float[num];
@@ -8,8 +8,8 @@ float[] w = new float[num];
 float[] h = new float[num];
  
 void setup(){
-  //size(field_width, field_height);
-  size(1080,1080);
+  size(field_width, field_height);
+  // size(1080,1080);
   frameRate(60);
   noFill();
   smooth();
@@ -29,13 +29,4 @@ void draw(){
      rect(x[i], y[i], w[i], h[i]);
   }
   frame++;
-}
-
-
-
-
-void keyPressed() {
-  if ( key == ' ' ) {
-    save( System.nanoTime() + ".png" );
-  }
 }
