@@ -11,6 +11,7 @@ void setup(){
   noStroke();
   //noFill();
   //frameRate(10);
+  
   frameRate(60);
   background(0);
   xstart = 0;
@@ -23,7 +24,7 @@ void drawPoint(float x, float y, float val){
   fill(val*150, 100,100);
   float size = 100 * val* val - 20;
   // rect(x + (20-size)/2, y + (20 - size)/2, size, size);
-  rect(-size/2, -size/2, size, size);
+  rect(-size *3, -size/4, size*6, size/2);
   
 }
 float frame= 0;
@@ -31,10 +32,12 @@ float frame= 0;
 float xScroll = 0;
 float yScroll = 0;
 void draw(){
-  //background(0);
   //noStroke();
+  // blendMode(BLEND);
   fill(0);
-  rect(0,0,width,height);
+  background(0);
+  blendMode(ADD);
+  // rect(0,0,width,height);
   //xScroll += 0.05;
   yScroll += 0.01;
   //xnoise = xstart;
