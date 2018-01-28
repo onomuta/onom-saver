@@ -35,8 +35,8 @@ void draw(){
   blendMode(ADD);
   fill(255);
   for(int i = num - 1 ; i > 0 ; i--) {
-    xs[i] = (noise(frame/1000 + i*1000)-0.5) * 2;
-    ys[i] = -noise(frame/1000 + i*2000) * 0.5;
+    xs[i] = (noise(frame/1000 + i*1000)-0.5) * 3;
+    ys[i] = -noise(frame/1000 + i*2000) * 0.8;
     
     x[i] += xs[i];
     y[i] += ys[i];
