@@ -1,7 +1,7 @@
 int field_width = screenWidth;
 int field_height = screenHeight;
 float frame = 0;
-int num = 40;
+int num = 30;
 float[] x = new float[num];
 float[] y = new float[num];
 float[] xs = new float[num];
@@ -33,7 +33,8 @@ void draw(){
   strokeWeight(6);
 
   for(int i = num - 1 ; i > 0 ; i--) {
-    stroke((((i/num)*255)*0.7 + frame) % 255, 255,200);
+    // stroke((((i/num)*255)*0.7 + frame) % 255, 255,200);
+    stroke( sin(((i*5 + frame)/50)%1) * 80 + 140, 255,250);
 
     x[i] += (noise(xs[i]/10, frame/330)-0.5) * 10;
     y[i] += (noise(ys[i]/10, frame/330)-0.5) * -10;
