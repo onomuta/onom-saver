@@ -65,10 +65,9 @@ noStroke();
 
   y1 = 0;
   y2 = -1900;
-  y3 = ((nowPx - nowPx%width)/width);
-  y4 = ((nowPx - nowPx%width)/width);
+  y3 = ((nowPx - nowPx%width)/width) +0.5;
+  y4 = ((nowPx - nowPx%width)/width) +0.5;
   bezier(x1,y1,x2,y2,x3,y3,x4,y4);
-
 
   bezier( x1-width, y1, x2-width, y2, x3-width, y3, x4-width, y4);
   bezier( x1+width, y1-1, x2+width, y2-1, x3+width, y3-1, x4+width, y4-1);
