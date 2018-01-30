@@ -1,6 +1,6 @@
 # onom-saver
 
-https://onomuta.github.io/onom-saver/
+https://onomuta.github.io/onom-shuffle/
 
 use onom-saver as sub source, in your VJ set.  
-it's simple, like a screen saver.
+shuffle, shuffle, shuffle.
