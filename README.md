@@ -2,5 +2,5 @@
 
 https://onomuta.github.io/onom-shuffle/
 
-use onom-saver as sub source, in your VJ set.  
+use onom-shuffle as sub source, in your VJ set.  
 shuffle, shuffle, shuffle.
