@@ -1,4 +1,4 @@
-# onom-saver
+# onom-shuffle
 
 https://onomuta.github.io/onom-shuffle/
 
