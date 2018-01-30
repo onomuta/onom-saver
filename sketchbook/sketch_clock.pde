@@ -7,9 +7,6 @@ void setup() {
    noStroke();
 
 frameRate(60);
-
-
-
 }
 float h;
 float m;
@@ -20,8 +17,13 @@ float now;
 float nowPx;
 float allPx = width*height;
 
+float gap = 0;
 
+boolean flag = true;
 
+int count = 0;
+
+float old = 0;
 void draw() {
 
  background(255);
@@ -35,12 +37,29 @@ allPx = width*height;
  s = second();
  ms = millis();
 
- now = h*60*60*1000 + m*60*1000 + s*100 + ms;
+ now = h*60*60*1000 + m*60*1000 + s*1000 + (ms - gap)%1000;
 
  nowPx = now/day * allPx;
 
  rect(0,0,width, (nowPx - nowPx%width)/width);
  rect(0,  (nowPx - nowPx%width)/width,nowPx%width,1);
- text(nowPx,10,10);
+
+
+if(s != old && flag == false){
+  gap = ms%1000;
+  flag = true;
+}
+old = s;
+flag=false;
+
+
+//  fill(255);
+//  text(h,10,10);
+//  text(m,10,20);
+//  text(s,10,30);
+//  text(ms%1000,0,40);
+
+
+//   text(gap,0,50);
 
 }
