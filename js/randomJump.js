@@ -26,7 +26,7 @@ function changeScene(){
   rlink[5] = "sketch_005.html";
   rlink[6] = "sketch_006.html";
   rlink[7] = "sketch_007.html";
-  // rlink[8] = "sketch_008.html";
+  rlink[8] = "sketch_008.html";
   // rlink[9] = "sketch_009.html";
   var x = Math.floor(Math.random() * rlink.length);
   window.location.href = "../sketchbook/"+rlink[x];
