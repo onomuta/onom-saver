@@ -58,18 +58,19 @@ noStroke();
 
   noFill();
   stroke(255);
-  x1 = nowPx%width - 20;
-  x2 = nowPx%width - 100 + noise(frame/500 + 123.456) * 50;
-  x3 = nowPx%width - 100 - noise(frame/500) * 50;
+  x1 = nowPx%width + 900;
+  x2 = nowPx%width + 900 + noise(frame/500 + 123.456) * 200;
+  x3 = nowPx%width - 400 - noise(frame/500) * 200;
   x4 = nowPx%width ;
 
-  y1 = -100;
-  y2 = 0;
+  y1 = 0;
+  y2 = -1900;
   y3 = ((nowPx - nowPx%width)/width);
   y4 = ((nowPx - nowPx%width)/width);
   bezier(x1,y1,x2,y2,x3,y3,x4,y4);
 
 
+  bezier( x1-width, y1, x2-width, y2, x3-width, y3, x4-width, y4);
   bezier( x1+width, y1-1, x2+width, y2-1, x3+width, y3-1, x4+width, y4-1);
 
   //  fill(255);
