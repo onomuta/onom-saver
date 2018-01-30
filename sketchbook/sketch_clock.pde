@@ -5,6 +5,8 @@ void setup() {
     size(field_width, field_height);
 
     noStroke();
+    // strokeWeight(0.8);
+    // smooth();
 
   frameRate(60);
 }
@@ -27,11 +29,10 @@ float old = 0;
 float x1,x2,x3,x4,y1,y2,y3,y4;
 
 float frame = 0;
-
-void draw() {
-noStroke();
-  background(255);
-
+float c = 0;
+void draw() {  
+  noStroke();
+  background(c);
 
   allPx = width*height;
 
@@ -52,12 +53,12 @@ noStroke();
   fill(0);
   rect(0,0,width, (nowPx - nowPx%width)/width);
   rect(0, (nowPx - nowPx%width)/width,nowPx%width,1);
-  fill(255);
+
   // rect(nowPx%width,((nowPx - nowPx%width)/width)-10,1,10);
   // rect(nowPx%width,((nowPx - nowPx%width)/width)-40,1,41);
 
   noFill();
-  stroke(255);
+  stroke(c);
   x1 = nowPx%width + 900;
   x2 = nowPx%width + 900 + noise(frame/500 + 123.456) * 200;
   x3 = nowPx%width - 400 - noise(frame/500) * 200;
@@ -81,5 +82,6 @@ noStroke();
 
   //   text(gap,0,50);
 
+  c = min(now/100, 255);
   frame ++;
 }
